@@ -44,4 +44,8 @@ h2 {
   .card__image {
     height: 288px;
   }
+
+  h2 {
+    width: 288px;
+  }
 }
