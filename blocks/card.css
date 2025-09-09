@@ -19,7 +19,6 @@ h2 {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0%;
   color: #212121;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -29,6 +28,7 @@ h2 {
 
 .card__like-btn {
   background-image: url(../images/Union.svg);
+  background-size: contain;
   width: 23px;
   height: 20px;
   border: none;
@@ -42,10 +42,14 @@ h2 {
 }
 @media screen and (max-width: 627px) {
   .card__image {
+    display: flex;
     height: 288px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   h2 {
-    margin: 0;
+    font-size: 16px;
+    line-height: 1;
   }
 }
