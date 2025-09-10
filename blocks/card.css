@@ -14,7 +14,7 @@
   justify-content: space-between;
 }
 
-h2 {
+.card__title {
   margin: 0;
   font-weight: 500;
   font-size: 20px;
@@ -48,8 +48,9 @@ h2 {
     align-items: center;
   }
 
-  h2 {
+  .card__title {
     font-size: 16px;
     line-height: 1;
+    max-width: 235px;
   }
 }
