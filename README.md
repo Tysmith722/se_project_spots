@@ -23,4 +23,4 @@ This webpage is deployed to GitHub Pages
 
 here is my walkthrough video
 
-[Watch the video on Google Drive](https://drive.google.com/file/d/1ZUv_hcmHkp6CUzoFTNt-kfKDU8EboEvN/view?usp=drive_link)
+[Watch the video on Google Drive](https://drive.google.com/file/d/19UGSP-xhWAikV3Jj5sZgUq3y5FhgqEQy/view?usp=sharing)
