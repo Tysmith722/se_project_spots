@@ -17,7 +17,7 @@ Spots is a responsice designed webpage to showcase different images shared by us
 
 This webpage is deployed to GitHub Pages
 
-- [Deployment Link] (https://tysmith722.github.io/se_project_spots/)
+- [Deployment Link](https://tysmith722.github.io/se_project_spots/)
 
 ## Project video
 
