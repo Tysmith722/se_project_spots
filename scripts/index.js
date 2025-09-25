@@ -1,3 +1,7 @@
+const profileNameElement = document.querySelector(".profile__name");
+const profileDescriptionElement = document.querySelector(
+  ".profile__description"
+);
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -6,18 +10,58 @@ const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
-editProfileBtn.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
-});
+const editProfileForm = editProfileModal.querySelector(".modal__form");
+const nameInput = editProfileModal.querySelector("#profile-name-input");
+const descriptionInput = editProfileModal.querySelector(
+  "#profile-description-input"
+);
 
-editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
-});
+const newPostForm = newPostModal.querySelector(".modal__form");
+const linkInput = newPostModal.querySelector("#card-image-input");
+const captionInput = newPostModal.querySelector("#profile-caption-input");
 
-newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
-});
+const MODAL_OPEN_CLASS = "modal_is-opened";
 
-newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
-});
+function openModal(modal) {
+  modal.classList.add(MODAL_OPEN_CLASS);
+}
+
+function closeModal(modal) {
+  modal.classList.remove(MODAL_OPEN_CLASS);
+}
+
+function handleOpenEditProfile() {
+  nameInput.value = profileNameElement.textContent.trim();
+  descriptionInput.value = profileDescriptionElement.textContent.trim();
+
+  openModal(editProfileModal);
+}
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+
+  profileNameElement.textContent = nameInput.value;
+  profileDescriptionElement.textContent = descriptionInput.value;
+
+  closeModal(editProfileModal);
+}
+
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+
+  console.log("New Post Link:", linkInput.value);
+  console.log("New Post Caption:", captionInput.value);
+
+  closeModal(newPostModal);
+}
+
+editProfileBtn.addEventListener("click", handleOpenEditProfile);
+newPostBtn.addEventListener("click", () => openModal(newPostModal));
+
+editProfileCloseBtn.addEventListener("click", () =>
+  closeModal(editProfileModal)
+);
+newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
+
+editProfileForm.addEventListener("submit", handleProfileFormSubmit);
+newPostForm.addEventListener("submit", handleNewPostSubmit);
