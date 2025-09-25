@@ -9,12 +9,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0s;
 }
 
 .modal__container {
@@ -31,7 +36,7 @@
   position: absolute;
   background-image: url(../images/X-icon.svg);
   top: 32px;
-  right: 50px;
+  right: 32px;
   height: 40px;
   width: 40px;
   opacity: 0.4;
@@ -39,7 +44,6 @@
   background-color: transparent;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  z-index: 1000;
 }
 
 .modal__close-btn:hover {
