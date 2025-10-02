@@ -94,6 +94,6 @@ editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 newPostForm.addEventListener("submit", handleNewPostSubmit);
 
 initialCards.forEach(function (item) {
-  console.log(card.name);
-  console.log(card.link);
+  console.log(item.name);
+  console.log(item.link);
 });
