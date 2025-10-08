@@ -1,3 +1,6 @@
+.card {
+  position: relative;
+}
 .card__image {
   height: 413px;
   width: 100%;
@@ -40,6 +43,33 @@
   opacity: 100%;
   cursor: pointer;
 }
+
+.card__like-btn_active {
+  background-image: url(../images/State=State4.svg);
+  opacity: 100%;
+}
+
+.card__delete-btn {
+  background-image: url(../images/State=Default.svg);
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 19px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card__delete-btn {
+  opacity: 1;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     display: flex;
