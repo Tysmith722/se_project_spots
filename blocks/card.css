@@ -52,23 +52,22 @@
 
 .card__delete-btn {
   background-image: url(../images/State=Default.svg);
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 18px;
-  height: 19px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   border: none;
   cursor: pointer;
-  z-index: 2;
   position: absolute;
   top: 20px;
   right: 20px;
-  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.card:hover .card__delete-btn {
-  opacity: 1;
+.card__delete-btn:hover {
+  background-color: #ff6565;
 }
 
 @media screen and (max-width: 627px) {

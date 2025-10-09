@@ -51,6 +51,7 @@
 }
 
 .modal__submit-btn {
+  border: none;
   max-width: 156px;
   width: 100%;
   background-color: #212121;
@@ -63,7 +64,7 @@
 }
 
 .modal__submit-btn:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .modal__title {
@@ -121,23 +122,16 @@
 .modal__preview-caption {
   color: white;
   font-family: Poppins, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 1.25;
   margin-top: 10px;
 }
 
 .modal__close-btn_type_preview {
-  position: absolute;
   top: -40px;
   right: -40px;
   background-image: url(../images/X-icon.svg);
   opacity: 1;
-  height: 40px;
-  width: 40px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 627px) {
@@ -166,5 +160,14 @@
   .modal__preview-image {
     max-width: 90vw;
     max-height: 90vh;
+  }
+
+  .modal__container {
+    padding: 22px 12px 12px;
+  }
+
+  .modal__close-btn {
+    top: 12px;
+    right: 12px;
   }
 }
