@@ -115,6 +115,7 @@
 .modal__preview-image {
   max-width: 80vw;
   max-height: 80vh;
+  border-radius: 8px;
   object-fit: contain;
   display: block;
 }
@@ -125,13 +126,16 @@
   font-size: 20px;
   line-height: 1.25;
   margin-top: 10px;
+  background-color: #212121;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 4px 8px;
 }
 
 .modal__close-btn_type_preview {
   top: -40px;
   right: -40px;
-  background-image: url(../images/X-icon.svg);
-  opacity: 1;
+  background-image: url(../images/Group\ 27.svg);
 }
 
 @media screen and (max-width: 627px) {
@@ -160,6 +164,10 @@
   .modal__preview-image {
     max-width: 90vw;
     max-height: 90vh;
+  }
+
+  .modal__preview-caption {
+    font-size: 16px;
   }
 
   .modal__container {
