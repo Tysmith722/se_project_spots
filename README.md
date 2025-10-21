@@ -19,8 +19,7 @@ This webpage is deployed to GitHub Pages
 
 - [Deployment Link](https://tysmith722.github.io/se_project_spots/)
 
-## Project video
+## Project Pitch Video
 
-here is my walkthrough video
-
-[Watch the video on Google Drive](https://drive.google.com/file/d/19UGSP-xhWAikV3Jj5sZgUq3y5FhgqEQy/view?usp=sharing)
+Check out [this video](https://drive.google.com/file/d/19UGSP-xhWAikV3Jj5sZgUq3y5FhgqEQy/view?usp=drive_link), where I describe my
+project and some challenges I faced while building it.
