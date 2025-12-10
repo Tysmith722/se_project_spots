@@ -1,11 +1,3 @@
-const config = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__button_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
-};
 const showInputError = (formEl, inputEl, { inputErrorClass, errorClass }) => {
   const errorEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.add(inputErrorClass);
@@ -57,6 +49,7 @@ const setEventListeners = (formEl, config) => {
     });
   });
 };
+
 export const clearFormErrors = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
 
@@ -84,5 +77,3 @@ export const enableValidation = (config) => {
     setEventListeners(formEl, config);
   });
 };
-
-enableValidation(config);
