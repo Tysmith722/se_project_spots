@@ -55,7 +55,6 @@
   opacity: 0.4;
   border: none;
   background-color: transparent;
-  color: #ffffff;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
 }
@@ -108,8 +107,8 @@
 
 .modal__submit-btn_type_delete {
   width: 156px;
-  min-height: 52px;
-  background-color: #e74c3c;
+  height: 52px;
+  background-color: #ff6565;
   color: #fff;
   padding: 18px 32px;
   border: none;
@@ -229,16 +228,22 @@
 @media screen and (max-width: 627px) {
   .modal__title {
     font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
   }
 
   .modal__input {
-    font-size: 16px;
-    width: 276px;
+    font-size: 14px;
+    width: 100%;
     max-width: 100%;
   }
 
   .modal__submit-btn {
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
+    height: 46px;
+    font-size: 14px;
+    margin-top: 24px;
   }
 
   .modal__close-btn_type_preview {
@@ -259,10 +264,38 @@
 
   .modal__container {
     padding: 22px 12px 12px;
+    position: relative;
   }
 
   .modal__close-btn {
-    top: 12px;
-    right: 12px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/X-icon.svg");
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__button-group {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .modal__submit-btn_type_delete,
+  .modal__cancel-btn {
+    width: 100%;
+    height: 46px;
   }
 }
