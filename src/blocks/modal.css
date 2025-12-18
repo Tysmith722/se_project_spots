@@ -40,6 +40,7 @@
 .modal__container_type_delete .modal__close-btn {
   top: -16px;
   right: -40px;
+  filter: brightness(0) invert(1);
 }
 
 .modal__close-btn {
