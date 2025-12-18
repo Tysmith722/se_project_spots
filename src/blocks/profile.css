@@ -24,16 +24,38 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease;
+  display: block;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  font-size: 0;
+}
+
+.profile__avatar-edit-btn::after {
+  content: "Edit Avatar";
+  position: absolute;
+  bottom: 8px;
+  left: 39px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Poppins, Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
   background-image: url("../images/pencil.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px 26px;
+  background-position: 12px center;
+  background-size: 16px 16px;
+  padding: 8px 16px 8px 36px;
+  border-radius: 90px;
+  white-space: nowrap;
+  filter: brightness(0) invert(1);
 }
 
 .profile__avatar-container:hover .profile__avatar-edit-btn {
@@ -117,10 +139,11 @@
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
-    max-width: 288px;
     align-items: center;
     text-align: center;
-    padding-top: 20px;
+    padding: 20px 0;
+    max-width: 288px;
+    margin: 0 auto;
   }
 
   .profile__avatar-container {
@@ -129,36 +152,25 @@
     width: 80px;
   }
 
-  .profile__avatar {
-    height: 100%;
-    width: 100%;
-  }
-
   .profile__avatar-edit-btn {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: transparent;
+    display: block;
   }
 
-  .profile__name {
-    margin: 0 0 6px;
-    font-size: 20px;
-  }
-
-  .profile__column {
-    margin: 0 0 20px;
-  }
-
-  .profile__description {
-    margin: 0 0 32px;
-    font-size: 16px;
-  }
-
-  .profile__edit-btn {
-    margin: 0 0 12px;
+  .profile__avatar-edit-btn::after {
+    display: none;
   }
 
   .profile__add-btn {
-    margin-left: 0;
+    margin: 12px 0 0;
     width: 100%;
+    height: 40px;
+    padding: 0;
+    font-size: 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -64,6 +64,7 @@ const captionInput = newPostModal.querySelector("#profile-caption-input");
 
 const deleteConfirmForm = deleteConfirmModal.querySelector(".modal__form");
 const deleteSubmitBtn = deleteConfirmForm.querySelector(".modal__submit-btn");
+const deleteCancelBtn = deleteConfirmModal.querySelector(".modal__cancel-btn");
 
 const avatarForm = avatarModal.querySelector(".modal__form");
 const avatarLinkInput = avatarModal.querySelector("#avatar-link-input");
@@ -193,6 +194,10 @@ function handleOpenEditProfile() {
   nameInput.value = profileNameElement.textContent.trim();
   descriptionInput.value = profileDescriptionElement.textContent.trim();
 
+  const submitBtn = editProfileForm.querySelector(".modal__submit-btn");
+  submitBtn.classList.add(config.inactiveButtonClass);
+  submitBtn.disabled = true;
+
   openModal(editProfileModal);
 }
 
@@ -296,6 +301,12 @@ editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 newPostForm.addEventListener("submit", handleNewPostSubmit);
 deleteConfirmForm.addEventListener("submit", handleDeleteSubmit);
 avatarForm.addEventListener("submit", handleAvatarFormSubmit);
+
+deleteCancelBtn.addEventListener("click", () => {
+  closeModal(deleteConfirmModal);
+  selectedCard = null;
+  selectedCardId = null;
+});
 
 document.querySelectorAll(".modal").forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
